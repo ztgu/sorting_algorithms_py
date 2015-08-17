@@ -7,7 +7,7 @@ The code is clean, simple and easy to understand.
 Average Complexities!
 -----------------
 
-Check out the Big-O complexities of the common sorting algorithms.
+Check out the average Big-O complexities of the common sorting algorithms:
 
 - Quicksort:	O(n log(n))
 - Mergesort:	O(n log(n))
