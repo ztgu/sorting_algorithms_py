@@ -1,19 +1,19 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
-def swap(A, i, j):
-    A[i], A[j] = A[j], A[i]
+def swap(array, i, j):
+    tmp = array[i]
+    array[i] = array[j]
+    array[j] = tmp
 
-def selectionsort(A):
-    for i in range(0, len(A)):
+def selectionsort(array):
+    for i in range(0, len(array)):
         Ismallest = i
-        for j in range(i+1, len(A)):
-            if A[j] < A[Ismallest]:
+        for j in range(i+1, len(array)):
+            if array[j] < array[Ismallest]:
                 Ismallest = j
-        swap(A, i, Ismallest)
-
-
+        swap(array, i, Ismallest)
 
 if __name__ == "__main__":
-    A = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
-    selectionsort(A)
-    print A
+    array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
+    selectionsort(array)
+    print array

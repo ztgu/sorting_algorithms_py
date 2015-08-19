@@ -1,48 +1,39 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
-def _mergesort(A, start, end):
+def _mergesort(array, start, end):
     """ Recursive mergesort function """
-
-    # (1) Split
+    # split
     mid = (start + end)/2
     if start < end:
-        _mergesort(A, start, mid)
-        _mergesort(A, mid+1, end)
+        _mergesort(array, start, mid)
+        _mergesort(array, mid+1, end)
     elif start == end: return
 
-    # (2) Merging
+    # merging Left and Right array
     L = start; R = mid+1
-    tmp_A = []
+    tmp_array = []
     while ( L <= mid and R <= end):
-        if (A[L] < A[R]):
-            tmp_A.append(A[L])
+        if (array[L] < array[R]):
+            tmp_array.append(array[L])
             L += 1
         else:
-            tmp_A.append(A[R])
+            tmp_array.append(array[R])
             R += 1
 
-    # (3) Append remaining list
+    # append remaining list, Left array
     if L <= mid:
-        tmp_A += A[L:]
+        tmp_array += array[L:]
     else:
-        tmp_A += A[R:]
+        tmp_array += array[R:]
 
-    # (4) tmp_A to A
+    # tmp_array to array
     i = 0;
     while (start <= end):
-        A[start] = tmp_A[i]
+        array[start] = tmp_array[i]
         start += 1; i += 1;
 
-
-def mergesort(A):
-    _mergesort(A, 0, len(A)-1)
-
-
 if __name__ == "__main__":
-
-    A = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
-
-    mergesort(A)
-
-    print A
+    array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
+    _mergesort(array, 0, len(array)-1)
+    print array
 

@@ -2,7 +2,7 @@ sorting_algorithms_py
 =====================
 
 Basic sorting algorithms written in python. 
-The code is clean, simple and easy to understand.
+The code is simple and easy to understand.
 
 Average Complexities!
 -----------------

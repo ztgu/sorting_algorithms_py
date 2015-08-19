@@ -1,44 +1,47 @@
-#!/usr/bin/env python
+#!/usr/bin/python2
 
-def swap(A, i, j):
-    A[i], A[j] = A[j], A[i]
+def swap(array, i, j):
+    tmp = array[i]
+    array[i] = array[j]
+    array[j] = tmp
 
-def heapify(A):
+def heapify(array):
     """ Build heap """
-    start = (len(A) - 2) / 2  # (1  2  [3]  4  5)
+    # Middle in array
+    start = (len(array) - 2) / 2
     while start >= 0:
-        percDown(A, start, len(A) - 1)
+        perc_down(array, start, len(array) - 1)
         start -= 1
 
-def percDown(A, start, end):
-    """ Checks if structure is heap"""
+def perc_down(array, start, end):
+    """ Check/modify heap structure """
     largest = 2 * start + 1
     while largest <= end:
-        #                       left child < right child
-        if (largest < end) and (A[largest] < A[largest + 1]):
+        # left child < right child
+        if (largest < end) and (array[largest] < array[largest + 1]):
             largest += 1
-        #  biggest child > parent
-        if (A[largest] > A[start]):
-            swap(A, largest, start)
+        # biggest child > parent
+        if (array[largest] > array[start]):
+            swap(array, largest, start)
             start = largest
             largest = 2 * start + 1
-        else: return
+        else: 
+            return
 
-def HeapSort(A):
+def heap_sort(array):
+    """ Sorting function """
     # biggest to smallest
-    heapify(A)
-    end = len(A) - 1
+    heapify(array)
+    end = len(array) - 1
     while end > 0:
-        # Swap biggest with end node
-        swap(A, end, 0)
-        # Make sure first node is biggest
-        percDown(A, 0, end - 1)
+        # swap biggest node with end node
+        swap(array, end, 0)
+        # make sure first node is biggest
+        perc_down(array, 0, end - 1)
         end -= 1
 
 if __name__ == "__main__":
-    A = [2, 7, 1, -2, 56, 5, 3]
-
-    HeapSort(A)
-
-    print(A)
+    array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
+    heap_sort(array)
+    print(array)
 
