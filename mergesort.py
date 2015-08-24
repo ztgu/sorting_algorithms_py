@@ -32,8 +32,11 @@ def _mergesort(array, start, end):
         array[start] = tmp_array[i]
         start += 1; i += 1;
 
-if __name__ == "__main__":
-    array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
+def mergesort(array):
     _mergesort(array, 0, len(array)-1)
+
+if __name__ == "__main__":
+    array = [17, 9, 13, 8, 7, 7, -5, 6, 11, 3, 4, 1, 2]
+    mergesort(array);
     print array
 
