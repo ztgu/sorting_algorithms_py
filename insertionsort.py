@@ -1,9 +1,13 @@
 #!/usr/bin/python2
 
+from __future__ import print_function
+
+
 def swap(array, i, j):
     tmp = array[i]
     array[i] = array[j]
     array[j] = tmp
+
 
 def insertionsort(array):
     for i in range(0, len(array)):
@@ -15,5 +19,4 @@ def insertionsort(array):
 if __name__ == "__main__":
     array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
     insertionsort(array)
-    print array
-
+    print(array)

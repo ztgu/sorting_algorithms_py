@@ -1,17 +1,22 @@
 #!/usr/bin/python2
 
+from __future__ import print_function
+
+
 def swap(array, i, j):
     tmp = array[i]
     array[i] = array[j]
     array[j] = tmp
 
+
 def heapify(array):
     """ Build heap """
     # Middle in array
-    start = (len(array) - 2) / 2
+    start = (len(array) - 2) // 2
     while start >= 0:
         perc_down(array, start, len(array) - 1)
         start -= 1
+
 
 def perc_down(array, start, end):
     """ Check/modify heap structure """
@@ -21,12 +26,13 @@ def perc_down(array, start, end):
         if (largest < end) and (array[largest] < array[largest + 1]):
             largest += 1
         # biggest child > parent
-        if (array[largest] > array[start]):
+        if array[largest] > array[start]:
             swap(array, largest, start)
             start = largest
             largest = 2 * start + 1
         else: 
             return
+
 
 def heap_sort(array):
     """ Sorting function """
@@ -40,8 +46,8 @@ def heap_sort(array):
         perc_down(array, 0, end - 1)
         end -= 1
 
+
 if __name__ == "__main__":
     array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
     heap_sort(array)
     print(array)
-
