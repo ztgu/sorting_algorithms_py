@@ -1,2 +1,5 @@
 [run]
 source = .
+
+[report]
+omit = */.hypothesis/*
