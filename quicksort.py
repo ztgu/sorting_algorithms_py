@@ -36,9 +36,3 @@ def _quicksort(array, start, end):
 
 def quicksort(array):
     _quicksort(array, 0, len(array)-1)
-
-
-if __name__ == "__main__":
-    array = [17, 9, 13, 8, 7, 7, -5, 6, 11, 3, 4, 1, 2]
-    quicksort(array)
-    print(array)

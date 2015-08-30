@@ -45,9 +45,3 @@ def heap_sort(array):
         # make sure first node is biggest
         perc_down(array, 0, end - 1)
         end -= 1
-
-
-if __name__ == "__main__":
-    array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
-    heap_sort(array)
-    print(array)
