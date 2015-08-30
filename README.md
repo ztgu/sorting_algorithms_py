@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Demotivated/sorting_algorithms_py.svg)](https://travis-ci.org/Demotivated/sorting_algorithms_py) [![Coverage Status](https://coveralls.io/repos/Demotivated/sorting_algorithms_py/badge.svg?branch=coveralls&service=github)](https://coveralls.io/github/Demotivated/sorting_algorithms_py?branch=coveralls)
+[![Build Status](https://travis-ci.org/Demotivated/sorting_algorithms_py.svg)](https://travis-ci.org/Demotivated/sorting_algorithms_py) [![Coverage Status](https://coveralls.io/repos/Demotivated/sorting_algorithms_py/badge.svg?branch=master&service=github)](https://coveralls.io/github/Demotivated/sorting_algorithms_py?branch=master)
 
 sorting_algorithms_py
 =====================
