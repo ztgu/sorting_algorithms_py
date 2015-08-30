@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Demotivated/sorting_algorithms_py.svg)](https://travis-ci.org/Demotivated/sorting_algorithms_py)
+
 sorting_algorithms_py
 =====================
 
