@@ -1,19 +1,24 @@
 #!/usr/bin/python2
 
+from __future__ import print_function
+
+
 def _mergesort(array, start, end):
     """ Recursive mergesort function """
     # split
-    mid = (start + end)/2
+    mid = (start + end)//2
     if start < end:
         _mergesort(array, start, mid)
         _mergesort(array, mid+1, end)
-    elif start == end: return
+    elif start == end:
+        return
 
     # merging Left and Right array
-    L = start; R = mid+1
+    L = start
+    R = mid+1
     tmp_array = []
-    while ( L <= mid and R <= end):
-        if (array[L] < array[R]):
+    while L <= mid and R <= end:
+        if array[L] < array[R]:
             tmp_array.append(array[L])
             L += 1
         else:
@@ -27,16 +32,12 @@ def _mergesort(array, start, end):
         tmp_array += array[R:]
 
     # tmp_array to array
-    i = 0;
-    while (start <= end):
+    i = 0
+    while start <= end:
         array[start] = tmp_array[i]
-        start += 1; i += 1;
+        start += 1
+        i += 1
+
 
 def mergesort(array):
     _mergesort(array, 0, len(array)-1)
-
-if __name__ == "__main__":
-    array = [17, 9, 13, 8, 7, 7, -5, 6, 11, 3, 4, 1, 2]
-    mergesort(array);
-    print array
-
