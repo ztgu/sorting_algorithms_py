@@ -6,7 +6,7 @@ def swap(array, i, j):
 def heapify(array):
     """ Build heap """
     # Middle in array
-    start = (len(array) - 2) / 2
+    start = (len(array) - 2) // 2
     while start >= 0:
         perc_down(array, start, len(array) - 1)
         start -= 1
