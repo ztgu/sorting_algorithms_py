@@ -1,14 +1,12 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 def swap(array, i, j):
-    tmp = array[i]
-    array[i] = array[j]
-    array[j] = tmp
+    array[i],array[j] = array[j],array[i]
 
 def heapify(array):
     """ Build heap """
     # Middle in array
-    start = (len(array) - 2) / 2
+    start = (len(array) - 2) // 2
     while start >= 0:
         perc_down(array, start, len(array) - 1)
         start -= 1
@@ -44,4 +42,3 @@ if __name__ == "__main__":
     array = [17, 9, 13, 8, 7, -5, 6, 11, 3, 4, 1, 2]
     heap_sort(array)
     print(array)
-

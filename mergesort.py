@@ -1,9 +1,9 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 def _mergesort(array, start, end):
     """ Recursive mergesort function """
     # split
-    mid = (start + end)/2
+    mid = (start + end)//2
     if start < end:
         _mergesort(array, start, mid)
         _mergesort(array, mid+1, end)
@@ -38,5 +38,5 @@ def mergesort(array):
 if __name__ == "__main__":
     array = [17, 9, 13, 8, 7, 7, -5, 6, 11, 3, 4, 1, 2]
     mergesort(array);
-    print array
+    print(array)
 
