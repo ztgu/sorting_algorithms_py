@@ -1,10 +1,5 @@
 #!/usr/bin/python2
 
-def swap(array, i, j):
-    tmp = array[i]
-    array[i] = array[j]
-    array[j] = tmp
-
 def partition(array, start, end):
     """ quicksort partitioning, using end """
     pivot = array[end]
@@ -15,7 +10,7 @@ def partition(array, start, end):
             L += 1
         while array[R] > pivot:
             R -= 1
-        swap(array, L, R)
+        array[L], array[R] = array[R] , array[L]
         # avoid hanging on the same numbers
         if ( array[L] == array[R] ):
             L += 1
