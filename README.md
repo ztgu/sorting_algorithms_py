@@ -15,4 +15,5 @@ Check out the average Big-O complexities of the common sorting algorithms:
 - Bubble Sort:	O(n^2)
 - Insertion Sort:	O(n^2)
 - Selection Sort:	O(n^2)
+- Counting Sort:	O(n + m)
 
